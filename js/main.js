@@ -41,6 +41,7 @@ submitButton.addEventListener(`click`, () => {
             messageDisplay.textContent = `You lose! The correct answer was: ${correctAnswer}`;
             submitButton.disabled = true;
             restartButton.style.display = "block";
+            guessInput.disabled = true; // Disable the input field
         }
     }
     guessInput.value = "";
@@ -56,4 +57,5 @@ restartButton.addEventListener('click', () => {
     guessInput.value = "";
     submitButton.disabled = false;
     restartButton.style.display = "none";
+    guessInput.disabled = false; // Re-enable the input field
 })
